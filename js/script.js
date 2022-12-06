@@ -28,10 +28,10 @@ const images = [
 
 const carouselParent = document.querySelector('div.carousel-image')
 
-console.log(carouselParent)
 
 for(let i = 0; i < images.length; i++){
-   const imgElement = document.createElement('img');
-   imgElement.innerHTML = `<img src= " ${images[i].image}" >`;
-   carouselParent.appendChild(imgElement)
+   const divImg = document.createElement('div-img');
+   divImg.innerHTML += `<img src= "./${images[i].image}">`;
+   divImg.classList.add('my_carousel-item')
+   carouselParent.appendChild(divImg)
 }
