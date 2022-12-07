@@ -34,6 +34,10 @@ images.forEach((element, index ) => {
    containerWrapper.innerHTML += `
       <div class="my_carousel-item">
          <img src=" ${element.image}" alt="title image">
+         <div class="description ">
+            <h1>${element.title}</h2>
+            <p class="fs-2">${element.text} </p>
+         </div> 
       </div> `
 });
 
