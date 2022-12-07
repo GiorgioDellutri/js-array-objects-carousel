@@ -5,6 +5,7 @@ body{
 
 main{
     height: 80vh;
+    color: whitesmoke;
 }
 
 div.carousel-wrapper{
@@ -51,6 +52,7 @@ div.next{
 div.my_carousel-item {
     height: 100%;
     display: none;
+    z-index: 1;
 }
 
 div.my_carousel-item.active {
@@ -62,4 +64,10 @@ div.my_carousel-item img{
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.description{
+    position:absolute;
+    bottom: 100px;
+    left: 30px;
 }
