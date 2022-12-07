@@ -26,12 +26,57 @@ const images = [
    }
 ];
 
-const carouselParent = document.querySelector('div.carousel-image')
+const containerWrapper  = document.querySelector('div.carousel-image');
+console.log(parent)
+let activeIndex = 0;
+
+images.forEach((element, index ) => {
+   containerWrapper.innerHTML += `
+      <div class="my_carousel-item">
+         <img src=" ${element.image}" alt="title image">
+      </div> `
+});
+
+document.getElementsByClassName('my_carousel-item') [activeIndex].classList.add('active');
+
+// Aggiungo l'event listener al bottone previous
+const previousButton = document.querySelector('div.previous');
+previousButton.addEventListener('click', function(){
+      document.querySelector('div.my_carousel-item.active').classList.remove('active');
+      if (activeIndex <= 0){
+         activeIndex = 4;
+      } else{
+         activeIndex--;
+      }
+      document.getElementsByClassName('my_carousel-item')[activeIndex].classList.add('active');
+}) 
+   
+const nextButton = document.querySelector('div.next')
+nextButton.addEventListener('click', function(){
+   document.querySelector('div.my_carousel-item.active').classList.remove('active');
+   if (activeIndex >= 4){
+      activeIndex = 0;
+   } else{
+      activeIndex++;
+   }
+   document.getElementsByClassName('my_carousel-item')[activeIndex].classList.add('active');
+})
 
 
-for(let i = 0; i < images.length; i++){
-   const divImg = document.createElement('div-img');
-   divImg.innerHTML += `<img src= "./${images[i].image}">`;
-   divImg.classList.add('my_carousel-item')
-   carouselParent.appendChild(divImg)
-}
+
+
+
+// let imgIndex = [];
+// // let indexCounter = 0;
+
+
+// // for(let i = 0; i < images.length; i++){
+// //    let  divImg = document.createElement('div');
+// //    divImg.innerHTML = `<img src= "./${images[i].image}">`;
+// //    divImg.classList.add('my_carousel-item');
+// //    parent.appendChild(divImg); 
+// //    imgIndex.push(divImg);
+// // }
+
+// // console.log(imgIndex)
+

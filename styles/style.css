@@ -11,13 +11,13 @@ div.carousel-wrapper{
     width: 77%;
     height: 680px;
     margin: auto;
-    background-color: aqua;
+    background-color: blueviolet;
     position: relative;
 }
 
 div.carousel-image{
     width: 100%;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 /* div.carousel-thumbnails{
@@ -50,12 +50,12 @@ div.next{
 
 div.my_carousel-item {
     height: 100%;
-    display:none;
+    display: none;
 }
 
-/* div.my_carousel-item.active {
+div.my_carousel-item.active {
     display:block;
-} */
+}
 
 div.my_carousel-item img{
     width: 100%;
